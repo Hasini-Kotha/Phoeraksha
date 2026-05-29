@@ -18,7 +18,11 @@ const PORT = parseInt(process.env.PORT ?? "5000", 10);
 
 app.use(
   cors({
-    origin: process.env.FRONTEND_ORIGIN ?? "http://localhost:3000",
+    origin: [
+      process.env.FRONTEND_ORIGIN ?? "http://localhost:3000",
+      "https://phoeraksha.vercel.app",
+      "http://localhost:5173"
+    ],
     credentials: true,
   })
 );
