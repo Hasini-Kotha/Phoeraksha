@@ -9,7 +9,6 @@ import payoutRoutes from "./routes/payout";
 import riskRoutes from "./routes/risk";
 import adminRoutes from "./routes/admin";
 import triggerRoutes from "./routes/trigger";
-import demoRoutes from "./routes/demo";
 import mlRoutes from "./routes/ml";
 import mockRoutes from "./routes/mock";
 import { startAutoTriggerCron } from "./cron/autoTrigger";

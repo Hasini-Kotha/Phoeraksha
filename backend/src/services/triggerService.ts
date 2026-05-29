@@ -218,7 +218,7 @@ export async function runTriggerForPolicy(
     };
   }
 
-  const triangulations =
+  const _triangulations =
     isMockDataDemoMode() || options?.overrideWeather
       ? [wState.rainfall, wState.rainfall, wState.rainfall]
       : await fetchWeatherTriangulation(lat, lon);
