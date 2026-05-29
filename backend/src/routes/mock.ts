@@ -67,8 +67,7 @@ router.get("/real-conditions", authMiddleware, async (req: Request, res: Respons
     return;
   }
 
-  const _lat = Number(u.latitude ?? 13.0827);
-  const _lon = Number(u.longitude ?? 80.2707);
+
 
   const [polRow] = await db
     .select({ policy: policies, plan: plans })

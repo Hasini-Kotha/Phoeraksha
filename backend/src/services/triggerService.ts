@@ -218,10 +218,9 @@ export async function runTriggerForPolicy(
     };
   }
 
-  const _triangulations =
-    isMockDataDemoMode() || options?.overrideWeather
-      ? [wState.rainfall, wState.rainfall, wState.rainfall]
-      : await fetchWeatherTriangulation(lat, lon);
+  if (!isMockDataDemoMode() && !options?.overrideWeather) {
+    await fetchWeatherTriangulation(lat, lon);
+  }
 
   // Scenario-based Activity Logic
   const scenario = isMockDataDemoMode() ? getActiveScenario() : "normal";
