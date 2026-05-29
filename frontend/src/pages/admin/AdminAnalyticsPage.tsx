@@ -2,8 +2,6 @@ import { useEffect, useState, useMemo } from "react";
 import { 
   Area, 
   AreaChart, 
-  Bar, 
-  BarChart, 
   CartesianGrid, 
   Cell, 
   Pie, 

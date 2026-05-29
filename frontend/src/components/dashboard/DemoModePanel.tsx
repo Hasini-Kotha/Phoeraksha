@@ -164,7 +164,7 @@ export function DemoModePanel({ onAfterForce }: Props) {
                         : "border-slate-800 bg-slate-900/50 hover:border-slate-700 hover:bg-slate-900"
                         }`}
                     >
-                      <div className={`text-2xl mb-2 transition-transform duration-300 ${active ? 'scale-110' : 'group-hover:scale-110'}`}>{ui.emoji}</div>
+                      <div className={`text-2xl mb-2 transition-transform duration-300 ${active ? 'scale-110' : 'group-hover:scale-110'}`}><i className={ui.icon}></i></div>
                       <div className={`text-xs font-bold uppercase tracking-tight ${active ? 'text-amber-500' : 'text-slate-300'}`}>
                         {ui.label}
                       </div>
