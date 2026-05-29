@@ -21,8 +21,8 @@ export function LoginPage() {
       await refreshUser();
       toast.success("Welcome back!");
       nav("/dashboard");
-    } catch {
-      toast.error("Invalid email or password");
+    } catch (err: any) {
+      toast.error(err.response?.data?.error || err.message || "Invalid email or password");
     } finally {
       setLoading(false);
     }
