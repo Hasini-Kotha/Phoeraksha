@@ -118,8 +118,8 @@ router.post(
 
       res.cookie(AUTH_COOKIE_NAME, token, {
         httpOnly: true,
-        sameSite: "lax",
-        secure: process.env.NODE_ENV === "production",
+        sameSite: "none",
+        secure: true,
         maxAge: maxAge * 1000,
       });
 
@@ -180,8 +180,8 @@ router.post(
 
     res.cookie(AUTH_COOKIE_NAME, token, {
       httpOnly: true,
-      sameSite: "lax",
-      secure: process.env.NODE_ENV === "production",
+      sameSite: "none",
+      secure: true,
       maxAge: maxAgeSec * 1000,
     });
 
@@ -225,8 +225,8 @@ router.get("/me", authMiddleware, async (req: Request, res: Response) => {
 router.post("/logout", (_req: Request, res: Response) => {
   res.clearCookie(AUTH_COOKIE_NAME, {
     httpOnly: true,
-    sameSite: "lax",
-    secure: process.env.NODE_ENV === "production",
+    sameSite: "none",
+    secure: true,
   });
   res.json({ ok: true });
 });
